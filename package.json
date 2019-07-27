@@ -1,0 +1,38 @@
+{
+  "name": "force-stdin-tty",
+  "version": "0.0.0",
+  "description": "Force stdin to be assigned to /dev/tty",
+  "repository": "https://github.com/dosentmatter/force-stdin-tty",
+  "author": "Kevin Lau",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "git",
+    "hooks",
+    "husky",
+    "interactive",
+    "stdin",
+    "tty"
+  ],
+  "scripts": {
+    "build": "npm-run-all --aggregate-output -l -p build:*",
+    "build:js": "babel src --out-dir lib --extensions '.ts'",
+    "build:types": "tsc --isolatedModules false --emitDeclarationOnly",
+    "prepublishOnly": "yarn run build",
+    "type-check": "tsc --declaration false --noEmit",
+    "type-check:watch": "yarn run type-check -- --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^12.6.8",
+    "npm-run-all": "^4.1.5",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "lib"
+  ]
+}
