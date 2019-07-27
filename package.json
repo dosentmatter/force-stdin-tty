@@ -1,6 +1,6 @@
 {
   "name": "force-stdin-tty",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Force stdin to be assigned to /dev/tty",
   "repository": "https://github.com/dosentmatter/force-stdin-tty",
   "author": "Kevin Lau",
@@ -12,7 +12,9 @@
     "husky",
     "interactive",
     "stdin",
-    "tty"
+    "tty",
+    "prompt",
+    "user"
   ],
   "scripts": {
     "build": "npm-run-all --aggregate-output -l -p build:*",
